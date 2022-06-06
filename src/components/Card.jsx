@@ -34,7 +34,7 @@ const Card = ( {todayWeather, todayDate, tempUnits, setTempUnits, startApp} ) =>
         <p className='city-country'>{todayWeather?.city}, {todayWeather?.country}</p>
         <p className='date'>{todayDate.dayWeek}, {todayDate.dayMonth} {todayDate.month}</p>
         <div className='icon-container'>
-            <img className='icon' src={`/src/components/assets/img/${icon}`} alt="Weather Icon" />
+            <img className='icon' src={`./src/components/assets/img/${icon}`} alt="Weather Icon" />
         </div>
         <p className='weather-desc'>{todayWeather?.weatherDesc}</p>
         <p className='temperature'>
