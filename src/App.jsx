@@ -98,7 +98,7 @@ function App() {
         setTempUnits={setTempUnits}
         startApp={startApp}
       />
-      <button onClick={getCoordinates} style={{display:hideBtn}}>Start App</button>
+      <button onClick={getCoordinates} style={{display:hideBtn}}>Start Weather App</button>
     </div>
   )
 }
