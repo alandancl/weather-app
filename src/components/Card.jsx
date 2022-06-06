@@ -22,12 +22,42 @@ const units = [
 ]
 
 const Card = ( {todayWeather, todayDate, tempUnits, setTempUnits, startApp} ) => {
+    
+    //Sets icon ID for day and night to be the same
     const icon = todayWeather?.weatherIcon[0] + todayWeather?.weatherIcon[1] + 'd'
+    
     let iconUrl
 
+    //Sets icon URL
     switch(icon) {
+        case '01d':
+            iconUrl = icon01d
+            break
+        case '02d':
+            iconUrl = icon02d
+            break
+        case '03d':
+            iconUrl = icon03d
+            break
         case '04d':
             iconUrl = icon04d
+            break
+        case '09d':
+            iconUrl = icon09d 
+            break
+        case '10d':
+            iconUrl = icon10d 
+            break
+        case '11d':
+            iconUrl = icon11d
+            break
+        case '13d':
+            iconUrl = icon13d 
+            break
+        case '50d':
+            iconUrl = icon50d 
+            break
+        default:
             break
     }
 
