@@ -9,6 +9,7 @@ import icon03d from './assets/img/03d.png'
 import icon02d from './assets/img/02d.png'
 import icon01d from './assets/img/01d.png'
 
+//Object stores units in Celsius and Fahrenheit
 const units = [
     {
         unit: 'Celsius',
@@ -21,8 +22,16 @@ const units = [
 ]
 
 const Card = ( {todayWeather, todayDate, tempUnits, setTempUnits, startApp} ) => {
-    const icon = todayWeather?.weatherIcon[0] + todayWeather?.weatherIcon[1] + 'd.png'
+    const icon = todayWeather?.weatherIcon[0] + todayWeather?.weatherIcon[1] + 'd'
+    let iconUrl
 
+    switch(icon) {
+        case '04d':
+            iconUrl = icon04d
+            break
+    }
+
+    //Change units
     const changeUnits = () => {
         setTempUnits(!tempUnits)
         console.log(tempUnits)
@@ -34,7 +43,7 @@ const Card = ( {todayWeather, todayDate, tempUnits, setTempUnits, startApp} ) =>
         <p className='city-country'>{todayWeather?.city}, {todayWeather?.country}</p>
         <p className='date'>{todayDate.dayWeek}, {todayDate.dayMonth} {todayDate.month}</p>
         <div className='icon-container'>
-            <img className='icon' src={`./src/components/assets/img/${icon}`} alt="Weather Icon" />
+            <img className='icon' src={iconUrl} alt="Weather Icon" />
         </div>
         <p className='weather-desc'>{todayWeather?.weatherDesc}</p>
         <p className='temperature'>
