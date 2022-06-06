@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444A56;
+}
+
+button {
+  display: block;
+  text-align: center;
+  background-color: #59ACFC;
+  color: #F4F7F9;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  box-shadow: 5px 5px #5375E2;
+  border: none;
+  border-radius: 10px;
+}
+
+.card {
+  max-width: 450px;
+  text-align: center;
+  background-color: #F4F7F9;
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.city-country {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.icon-container {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  /*display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.icon {
+  width: 65%;
+}
+
+.weather-desc {
+  font-size: 35px;
+}
+
+.temperature {
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.change-temp {
+  text-align: center;
+  background-color: #59ACFC;
+  color: #F4F7F9;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  box-shadow: 5px 5px #5375E2;
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.fa-solid {
+  color: #A7B7C9;
+  margin-bottom: 20px;
+}
+
+.extra-info {
+  color: #A7B7C9;
+  display: flex;
+}
+
+.extra {
+  justify-content: center;
+  width: 33%;
+}
+
+.extra span {
+  display: block;
+}
+
+.celsius, .fahrenheit {
+  margin: 0;
+  padding: 0;
+  border-radius: none;
+  background-color: transparent;
+  color: #444A56;
+  font-size: 45px;
+  box-shadow: none;
+  display: inline;
+
+}
+
+p.temperature {
+  display: flex;
+  align-items: first baseline;
+  justify-content: center;
+}
