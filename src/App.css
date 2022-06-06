@@ -115,3 +115,33 @@ p.temperature {
   align-items: first baseline;
   justify-content: center;
 }
+
+/*Spinner*/
+
+.spinner {
+  margin: auto;
+  border: 5px solid rgba(0, 0, 0, .1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-left-color: #59ACFC;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  text-align: center;
+  color: #5375E2;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+}

@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card from './components/Card'
+import Spinner from './components/Spinner'
 
 function App() {
 
@@ -88,6 +89,10 @@ function App() {
 
   console.log(todayWeather)
 
+  //Starts App
+  useEffect(() => {
+    setTimeout(getCoordinates, 2500);
+  }, [])
   
   return (
     <div className="App">
@@ -98,7 +103,10 @@ function App() {
         setTempUnits={setTempUnits}
         startApp={startApp}
       />
-      <button onClick={getCoordinates} style={{display:hideBtn}}>Start Weather App</button>
+      <Spinner 
+        hideBtn={hideBtn}
+      />
+      {/* <button onClick={getCoordinates} style={{display:hideBtn}}>Start Weather App</button> */}
     </div>
   )
 }
